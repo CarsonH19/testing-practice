@@ -1,1 +1,2 @@
 (()=>{"use strict";var o;console.log((o="hello").charAt(0).toUpperCase()+o.slice(1)),console.log("Hello Carson!".split("").reverse().join(""));console.log(3+5),console.log(((o,e)=>o-e)(3,5)),console.log(((o,e)=>o/e)(3,5)),console.log(((o,e)=>o*e)(3,5)),console.log(function(o,e){const l="ABCDEFGHIJKLMNOPQRSTUVWXZY";let s="";for(let e=0;e<5;e++){let t=o[e],n=l.indexOf(t.toUpperCase());if(-1===n){s+=t;continue}let c=l.charAt((n+3)%26);t===t.toLowerCase()?s+=c.toLowerCase():s+=c}return s}("HELLO"))})();
+//# sourceMappingURL=bundle.js.map

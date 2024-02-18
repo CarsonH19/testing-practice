@@ -1,20 +1,12 @@
 const path = require('path');
 
-// npm install webpack webpack-cli --save-dev
-// npx webpack --watch
-// npm install --save-dev style-loader css-loader
-// npm install --save-dev csv-loader xml-loader
-
-// GitHub Pages Hosting:
-// npm run pages
-
 module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    // devtool: 'source-map',
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
