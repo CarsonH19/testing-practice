@@ -3,7 +3,7 @@ export function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-console.log(capitalize("hello"));
+console.log(capitalize("what's your name?"));
 
 //
 export function reverseString(str) {
@@ -36,7 +36,7 @@ console.log(calculator.multiply(3, 5));
 //
 export function caesarCipher(str, shiftIndex) {
  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXZY";
- const positiveShift = shiftIndex % 26;
+ const positiveShift = Math.abs(shiftIndex) % 26;
  let cipher = "";
 
  for (let i = 0; i < str.length; i++) {
@@ -63,6 +63,32 @@ export function caesarCipher(str, shiftIndex) {
  return cipher;
 }
 
-console.log(caesarCipher("HELLO", 3));
+console.log(caesarCipher("Bang!", -5));
+console.log(caesarCipher("What's your name?", 15));
 
+// 
+function analyzeArray(arr) {
+  if (Array.isArray(arr)) {
+    let sum = 0;
+    let min = Infinity;
+    let max = -Infinity;
 
+    // Average Calculation, Minimum, Maximum
+    for (let i = 0; i < arr.length; i++) {
+      sum += arr[i];
+      if (arr[i] < min) min = arr[i];
+      if (arr[i] > max) max = arr[i];
+    }
+
+    const average = sum / arr.length;
+
+    return {
+      average: average,
+      min: min,
+      max: max,
+      length: arr.length
+    };
+  }
+}
+
+console.log(analyzeArray([3, 6, 9]));
