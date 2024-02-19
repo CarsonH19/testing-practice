@@ -67,7 +67,7 @@ console.log(caesarCipher("Bang!", -5));
 console.log(caesarCipher("What's your name?", 15));
 
 // 
-function analyzeArray(arr) {
+export function analyzeArray(arr) {
   if (Array.isArray(arr)) {
     let sum = 0;
     let min = Infinity;
@@ -91,4 +91,7 @@ function analyzeArray(arr) {
   }
 }
 
+
 console.log(analyzeArray([3, 6, 9]));
+console.log(analyzeArray([1, 2, 3, 4, 5, 6]));
+console.log(analyzeArray([-50, -20, 10]));
