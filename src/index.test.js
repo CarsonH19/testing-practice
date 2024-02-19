@@ -1,4 +1,10 @@
-import { capitalize, reverseString, calculator, caesarCipher, } from "./index";
+import {
+  capitalize,
+  reverseString,
+  calculator,
+  caesarCipher,
+  analyzeArray,
+} from "./index";
 
 // capitalize tests
 test("should output a string with a capitalized first letter", () => {
@@ -69,3 +75,33 @@ test("should output a caesar cipher", () => {
   expect(text).toBe("Lwpi'h odjg cpbt?");
 });
 
+// analyzeArray
+test("should output the average, min, max, and length of an array as an object", () => {
+  const object = analyzeArray([3, 6, 9]);
+  expect(object).toEqual({
+    average: 6,
+    min: 3,
+    max: 9,
+    length: 3
+  });
+});
+
+test("should output the average, min, max, and length of an array as an object", () => {
+  const object = analyzeArray([1, 2, 3, 4, 5, 6]);
+  expect(object).toEqual({
+    average: 3.5,
+    min: 1,
+    max: 6,
+    length: 6
+  });
+});
+
+test("should output the average, min, max, and length of an array as an object", () => {
+  const object = analyzeArray([-50, -20, 10]);
+  expect(object).toEqual({
+    average: -20,
+    min: -50,
+    max: 10,
+    length: 3
+  });
+});
